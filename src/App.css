@@ -1,0 +1,36 @@
+.card {
+  padding: 1em;
+  border: 1px solid;
+}
+
+.card_list{
+   width: 90vw;
+   max-width: 1170px;
+   margin: 5rem auto;
+   display: grid;
+   gap: 2rem;
+}
+.card img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.card button{
+  margin: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 300px) {
+  .card_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card{
+    background-color: #fff;
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+}
