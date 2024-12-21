@@ -1,30 +1,30 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-import Cards from './card'
-import { Hotels } from "./Hotels";
-import './App.css'
-import Registration from './Components/registration';
-import Navbar from './Components/Navbar';
-
+import Cards from "./Components/card";
+import { Hotels } from "./Components/Hotels";
+import "./App.css";
+import Registration from "./Components/registration";
+import Navbar from "./Components/Navbar";
+import Functionbar from "./Components/Functionbar";
 
 function App() {
-
   return (
     <>
       <Navbar />
+      <Functionbar />
+      <div className="card_list">
       {Hotels.map((card) => {
         return (
-          <>
-            <div className='card_list'>
+          
               <Cards {...card} key={card.id} />
-            </div>
-          </>
-        )
+           
+        );
       })}
+      </div>
 
       <Registration />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
