@@ -4,17 +4,14 @@ import Cards from './card'
 import { Hotels } from "./Hotels";
 import './App.css'
 import Registration from './Components/registration';
+import Navbar from './Components/Navbar';
 
 
 function App() {
 
   return (
     <>
-      <nav className='nav-bar'>
-        <ul>
-          <li> <button className='register-btn'>Register</button></li>
-        </ul>
-      </nav>
+      <Navbar />
       {Hotels.map((card) => {
         return (
           <>
