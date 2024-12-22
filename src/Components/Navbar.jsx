@@ -6,7 +6,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="navbar-left">
                 <a href="/" className="logo">
-                    Visit Sri Lanka
+                    Visit Sri Lankal
                 </a>
             </div>
             <div className="navbar-center">
@@ -23,7 +23,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-right">
-                <a href="/account" className="user-icon">
+                <a href="/Registration" className="user-icon">
                     <i className="fas fa-user"></i>
                 </a>
             </div>
