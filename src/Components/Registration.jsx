@@ -29,7 +29,7 @@ export default function Registration() {
                             <input type="password" placeholder="Password" />
                             <label></label>
                         </div>
-                        <button>Sign Up</button>
+                        <button className='sign-up-btn'>Sign Up</button>
                     </form>
                     <p className='lready-sign-up-text'>Already have an account<a href="#" className='sign-in-link'>Sign in</a></p>
                 </div>
