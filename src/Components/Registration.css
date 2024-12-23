@@ -100,7 +100,7 @@ span {
     font-size: 0.9rem;
 }
 
-button {
+.sign-up-btn {
     width: 100%;
     padding: 10px 15px;
     border: none;
@@ -112,7 +112,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.sign-up-btn:hover {
     background-color: #e52e71;
 }
 
