@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './Login.css';
 
 export default function Login() {
     return (
         <>
-            <div className="container" id="container">
-                <div className="sign-up-container">
+            <div className="login-main-container" id="login-main-container">
+                <div className="login-container">
                     <form action="#">
-                        <h1>Login</h1>
+                        <h1 className='top-login-text'>Login</h1>
                         <div class="social-container">
                             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
@@ -24,9 +25,9 @@ export default function Login() {
                             <input type="password" placeholder="Password" />
                             <label></label>
                         </div>
-                        <button className='sign-up-btn'>Login</button>
+                        <button className='login-btn'>Login</button>
                     </form>
-                    <p className='lready-sign-up-text'>Don't have any account?<a href="/Registration" className='sign-in-link'>Sign up</a></p>
+                    <p className='login-text'>Don't have any account?<a href="/Registration" className='login-link'>Sign up</a></p>
                 </div>
             </div>
         </>
