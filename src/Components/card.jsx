@@ -19,11 +19,11 @@ const Cards = (props) => {
     <section className="card">
       <div className="img_container">
         <button type="button" onClick={handlePrev} className="l_btn">
-          ◀
+          {"<"}
         </button>
         <img src={image[index]} alt={title} />
         <button type="button" onClick={handleNext} className="R_btn">
-          ▶
+          {">"}
         </button>
       </div>
       <div className="card_details">
