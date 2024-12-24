@@ -139,8 +139,8 @@
 
 .card_list {
   width: 90vw;
-  max-width: 1170px;
-  margin: 5rem auto;
+  max-width: 1000px;
+  margin: 2rem auto;
   display: grid;
 
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -163,14 +163,14 @@
 
 @media screen and (min-width: 650px) {
   .card_list {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 
 .card {
   background-color: #fff;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   text-align: center;
   position: relative;
 }
@@ -178,8 +178,8 @@
 
 
 .img_container img {
-  width: 330px;
-  height: 340px;
+  width: 200px;
+  height: 150px;
   object-fit: cover;
 }
 
@@ -195,14 +195,14 @@
   color: rgb(245, 239, 239);
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 15px;
+  height: 15px;
   display: none;
 
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 
@@ -214,15 +214,31 @@
 
 
 .card_details {
-  padding: 16px;
+  padding: 5px;
+}
+
+.card_details h2{
+  font-size: 18px;
+  font-family:'Playfair Display', serif;
+  font-weight: bold;
+}
+
+.card_details button{
+  font-size: 12px;
+  width: 180px;
+  height: 25px;
+  border-radius: 0;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .l_btn {
-  left: 10px;
+  left: 5pxpx;
 }
 
 .R_btn {
-  right: 10px;
+  right: 5px;
 }
 
 .function_bar {
