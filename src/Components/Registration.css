@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 450px;
-    height: 650px;
+    width: 400px;
+    height: 600px;
     padding: 30px 35px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -12,13 +12,13 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
 }
 
 
 .sign-up-container {
     width: 380px;
-    scale: 105%;
+    scale: 90%;
 }
 
 h1 {
@@ -129,8 +129,40 @@ span {
     color: #ff8a00;
 }
 
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 20%;
+        padding: 25px;
+        margin-top: 35px;
+        height: 280px;
+    }
 
-/* Tablets (600px to 768px) */
+    .sign-up-container {
+        width: 130%;
+        scale: 50%;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .social-container {
+        width: 75%;
+    }
+
+    .infield input {
+        padding: 10px 10px 10px 30px;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    .lready-sign-up-text {
+        font-size: 15px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .container {
         width: 80%;
@@ -169,6 +201,7 @@ span {
         margin-top: 85px;
         width: 80%;
         padding: 15px;
+        margin-left: 5px;
 
     }
 

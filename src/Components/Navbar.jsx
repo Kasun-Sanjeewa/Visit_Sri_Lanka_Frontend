@@ -47,7 +47,7 @@ const Navbar = () => {
                             <h3>User Options</h3>
                             <ul>
                                 <li><a href="/Registration">Sign-up</a></li>
-                                <li><a href="/settings">Log-in</a></li>
+                                <li><a href="/Login">Log-in</a></li>
                                 <li><a href="/logout">Logout</a></li>
                             </ul>
                         </div>
