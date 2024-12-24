@@ -6,6 +6,7 @@ export const Hotels = [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/242703517.jpg?k=4502ec2f60d98a82ec7b35ddf5ada15cdec28be54e4fdf2cdc747f2388c1075f&o=&hp=1",
     ],
     title: "Blue Haven Guest House (Kandy)",
+    category: "hotel",
     id: 1,
   },
   {
@@ -15,6 +16,7 @@ export const Hotels = [
       "https://cf.bstatic.com/xdata/images/hotel/max1280x900/417298194.jpg?k=19f4f6034ab16f851dc2ad65f6d14a77c33b59dd3ad36ed393450b66f9f393ed&o=&hp=1",
     ],
     title: "Hotel Sigiriya Kele (Sigiriya)",
+    category: "hotel",
     id: 2,
   },
   {
@@ -24,6 +26,7 @@ export const Hotels = [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/442118511.jpg?k=b3a14a7e4c1419733a7b502c7c4545d82189df3842280b43b638bfc1550739db&o=&hp=1",
     ],
     title: "Nallur Holidays Inn (Jaffna)",
+    category: "hotel",
     id: 3,
   },
   {
@@ -33,6 +36,7 @@ export const Hotels = [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/544245823.jpg?k=a924016794314103fb003108cc9f4c9764bd6806c3d311e118cc1fc44652e541&o=&hp=1",
     ],
     title: "Cinnamon Red Colombo (Colombo)",
+    category: "hotel",
     id: 4,
   },
   {
@@ -42,6 +46,7 @@ export const Hotels = [
       "https://cf.bstatic.com/xdata/images/hotel/max500/144693978.jpg?k=b883fdad54928d6ff86f251836b8b4cf2591b107d5395b4f013e4814e7523e34&o=",
     ],
     title: "Yala Safari Resort (Hambanthota)",
+    category: "hotel",
     id: 5,
   },
   {
@@ -51,6 +56,7 @@ export const Hotels = [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/478874943.jpg?k=939aec520d2d94cd7d18e32737eb034ecf15ac29e100cf3782a8919300c05ff6&o=&hp=1",
     ],
     title: "Hotel River Front (Hambanthota)",
+    category: "hotel",
     id: 6,
   },
 ];

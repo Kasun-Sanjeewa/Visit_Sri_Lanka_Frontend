@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-
+ 
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -182,43 +182,37 @@
   height: 340px;
   object-fit: cover;
 }
-<<<<<<< Updated upstream
-=======
 
 .img_container {
   position: relative;
 }
->>>>>>> Stashed changes
+
 
 .img_container button {
   position: absolute;
-  top: 58%;
-  background-color: hsla(0, 0%, 0%, 0.475);
+  bottom: 2px;
+  background-color: hsla(0, 0%, 0%, 0.218);
   color: rgb(245, 239, 239);
   border: none;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-<<<<<<< Updated upstream
-  display: flex;
-=======
-  display: none;
->>>>>>> Stashed changes
+  display: none; 
+
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-size: 20px;
 }
 
-<<<<<<< Updated upstream
-=======
 
-.img_container img:hover+button,
+
+.img_container img:hover + button, 
 .img_container:hover button {
   display: flex;
 }
 
->>>>>>> Stashed changes
+
 .card_details {
   padding: 16px;
 }
@@ -235,7 +229,6 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
 }
-
 
 
 .function_bar .list_link {
@@ -259,8 +252,9 @@
   color: #333;
   font-weight: bold;
   font-size: 1.2rem;
-<<<<<<< Updated upstream
-=======
   text-align: center;
->>>>>>> Stashed changes
+
 }
+
+
+

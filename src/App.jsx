@@ -13,6 +13,7 @@ function App() {
     <>
       <Navbar />
       <Functionbar />
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<CardList />} />
@@ -20,6 +21,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
         </Routes>
       </BrowserRouter>
+
     </>
   );
 }
