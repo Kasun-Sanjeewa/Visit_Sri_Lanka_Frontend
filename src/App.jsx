@@ -12,18 +12,22 @@ import { useState } from "react";
 function App() {
 
 
-const [category , setCategory] = useState('hotels');
+  const [category, setCategory] = useState('hotels');
+
+  const handleCatogory = (data) => {
+    setCategory(data);
+  }
 
 
 
   return (
     <>
       <Navbar />
-      <Functionbar />
+      <Functionbar handleCatogory={handleCatogory} />
 
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<CardList />} />
+          <Route path="/" element={<CardList category={category} />} />
           <Route path="/Registration" element={<Registration />} />
           <Route path="/Login" element={<Login />} />
         </Routes>

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
- 
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -197,7 +197,7 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  display: none; 
+  display: none;
 
   align-items: center;
   justify-content: center;
@@ -207,7 +207,7 @@
 
 
 
-.img_container img:hover + button, 
+.img_container img:hover+button,
 .img_container:hover button {
   display: flex;
 }
@@ -246,15 +246,13 @@
   text-align: center;
 }
 
-.list_link li a {
+.list_link li button {
   margin: 0;
   text-decoration: none;
   color: #333;
   font-weight: bold;
   font-size: 1.2rem;
   text-align: center;
-
+  all: unset;
+  cursor: pointer;
 }
-
-
-
