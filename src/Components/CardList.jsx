@@ -1,17 +1,14 @@
 import React from 'react'
 import Cards from './card';
-import { Hotels } from './Hotels';
+import { Data } from "../data/Data";
 
-export default function CardList() {
-    return (
-        <div className="card_list">
-            {Hotels.map((card) => {
-                return (
+export default function CardList({ category }) {
 
-                    <Cards {...card} key={card.id} />
-
-                );
-            })}
-        </div>
-    )
+  return (
+    <div className="card_list">
+      {Data[category].map((card) => {
+        return <Cards {...card} key={card.id} />;
+      })}
+    </div>
+  );
 }

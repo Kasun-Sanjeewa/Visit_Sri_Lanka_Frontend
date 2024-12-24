@@ -4,31 +4,30 @@ const Functionbar = () => {
       <div className="function_bar">
         <ul className="list_link">
           <li>
-            <a href="/beaches">Beaches</a>
+            <button onClick={() => setCategory("beaches")}>Beaches</button>
           </li>
           <li>
-            <a href="/Lake_Front">Lakes</a>
+            <button onClick={() => setCategory("lakes")}>Lakes</button>
           </li>
           <li>
-            <a href="/Hiking">Hiking</a>
+            <button onClick={() => setCategory("hotels")}>Hotels</button>
           </li>
           <li>
-            <a href="/Camping">Camping</a>
+            <button onClick={() => setCategory("camping")}>Camping</button>
           </li>
           <li>
-            <a href="/Forests">Forests</a>
+            <button onClick={() => setCategory("forest")}>Forests</button>
           </li>
           <li>
-            <a href="/Religius">Religius Places</a>
+            <button onClick={() => setCategory("Religius Places")}>
+              Religius Places
+            </button>
           </li>
           <li>
-            <a href="/Rooms">Rooms</a>
+            <button onClick={() => setCategory("cabana")}>Cabana</button>
           </li>
           <li>
-            <a href="/Cabana">Cabana</a>
-          </li>
-          <li>
-            <a href="/Hotels">Hotels</a>
+            <button onClick={() => setCategory("hotels")}>Hotels</button>
           </li>
         </ul>
       </div>

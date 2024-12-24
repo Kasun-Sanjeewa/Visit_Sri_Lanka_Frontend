@@ -1,4 +1,4 @@
-import { Hotels } from "./Hotels";
+import { Data } from "../data/Data";
 import { useState } from "react";
 
 const Cards = (props) => {

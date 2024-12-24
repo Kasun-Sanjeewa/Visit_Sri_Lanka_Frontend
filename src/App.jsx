@@ -6,9 +6,16 @@ import CardList from "./Components/CardList";
 import Registration from "./Components/Registration"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Components/Login";
+import { useState } from "react";
 
 
 function App() {
+
+
+const [category , setCategory] = useState('hotels');
+
+
+
   return (
     <>
       <Navbar />
