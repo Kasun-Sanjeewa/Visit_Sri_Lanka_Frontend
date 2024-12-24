@@ -16,13 +16,13 @@ const Navbar = () => {
         setIsPopupOpen(!isPopupOpen);
     };
 
-    useEffect(() => {
-        if (!userInfo) {
-            setIsPopupOpen(!isPopupOpen);
-        } else {
-            setIsUserRegistered(true);
-        }
-    }, [userInfo])
+    // useEffect(() => {
+    //     if (!userInfo) {
+    //         setIsPopupOpen(!isPopupOpen);
+    //     } else {
+    //         setIsUserRegistered(true);
+    //     }
+    // }, [userInfo])
 
     return (
         <nav className="navbar">
