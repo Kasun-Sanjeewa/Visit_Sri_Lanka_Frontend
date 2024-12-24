@@ -101,25 +101,33 @@
   height: 340px;
   object-fit: cover;
 }
+.img_container {
+  position: relative;
+}
 
 .img_container button {
   position: absolute;
-  top: 58%;
-  background-color: hsla(0, 0%, 0%, 0.475);
+  bottom: 2px;
+  background-color: hsla(0, 0%, 0%, 0.218);
   color: rgb(245, 239, 239);
   border: none;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  display: flex;
+  display: none; 
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-size: 20px;
 }
 
-.card_details{
-padding: 16px;
+.img_container img:hover + button, 
+.img_container:hover button {
+  display: flex;
+}
+
+.card_details {
+  padding: 16px;
 }
 
 .l_btn {
@@ -129,7 +137,6 @@ padding: 16px;
 .R_btn {
   right: 10px;
 }
-
 
 
 .function_bar .list_link {

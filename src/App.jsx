@@ -17,7 +17,7 @@ function App() {
         return (
           
               <Cards {...card} key={card.id} />
-           
+          
         );
       })}
       </div>
