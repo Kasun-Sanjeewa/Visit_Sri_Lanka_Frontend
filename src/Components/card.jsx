@@ -27,7 +27,7 @@ const Cards = (props) => {
       </div>
       <div className="card_details">
         <h2>{title}</h2>
-        <button type="button">Book Vehicle</button>
+        <button type="button" className="book-vehicle-btn">Book Vehicle</button>
         <button type="button">Map</button>
       </div>
     </section>
