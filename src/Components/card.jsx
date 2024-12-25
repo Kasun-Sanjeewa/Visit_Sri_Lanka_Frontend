@@ -26,11 +26,11 @@ const Cards = (props) => {
         </button>
       </div>
       <div className="card_details">
-        <h>{title}</h>
-        <div>
-          <button type="button">Book Vehicle</button>
-          <button type="button">Map</button>
-        </div>
+
+        <h2>{title}</h2>
+        <button type="button" className="book-vehicle-btn">Book Vehicle</button>
+        <button type="button">Map</button>
+
       </div>
     </section>
   );
