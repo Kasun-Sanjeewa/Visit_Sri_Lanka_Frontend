@@ -27,7 +27,7 @@ const Cards = (props) => {
       </div>
       <div className="card_details">
         <h>{title}</h>
-        <div>
+        <div className="Content_btn">
           <button type="button">Book Vehicle</button>
           <button type="button">Map</button>
         </div>
