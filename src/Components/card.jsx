@@ -12,6 +12,7 @@ const Cards = (props) => {
     setIndex((prevIndex) =>
       prevIndex === 0 ? image.length - 1 : prevIndex - 1
     ); // Loop backward
+    //Change the tags
   };
 
   return (
