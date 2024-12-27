@@ -1,28 +1,38 @@
-import { useState } from "react";
 
-import Cards from "./Components/card";
-import { Hotels } from "./Components/Hotels";
 import "./App.css";
-import Registration from "./Components/registration";
 import Navbar from "./Components/Navbar";
 import Functionbar from "./Components/Functionbar";
+import CardList from "./Components/CardList";
+import Registration from "./Components/Registration"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./Components/Login";
+import { useState } from "react";
+
 
 function App() {
+
+
+  const [category, setCategory] = useState('hotels');
+
+  const handleCatogory = (data) => {
+    setCategory(data);
+  }
+
+
+
   return (
     <>
       <Navbar />
-      <Functionbar />
-      <div className="card_list">
-      {Hotels.map((card) => {
-        return (
-          
-              <Cards {...card} key={card.id} />
-           
-        );
-      })}
-      </div>
+      <Functionbar handleCatogory={handleCatogory} />
 
-      <Registration />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<CardList category={category} />} />
+          <Route path="/Registration" element={<Registration />} />
+          <Route path="/Login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+
     </>
   );
 }
