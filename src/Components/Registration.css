@@ -134,6 +134,60 @@ span {
     color: #ff8a00;
 }
 
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    display: inline-block;
+    width: 40%;
+    height: 1px;
+    background: #ddd;
+    position: absolute;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.google-btn {
+    width: 100%;
+    padding: 0px 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #020202;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.google-image {
+    width: 50px;
+    margin-right: 10px;
+    scale: 85%;
+
+}
+
+
+.google-btn:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 @media screen and (max-width: 1200px) {
     .container {
         width: 20%;
