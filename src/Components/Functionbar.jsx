@@ -37,6 +37,7 @@ const Functionbar = ({ handleCatogory }) => {
           <button onClick={() => handleCatogory("ReligiusPlaces")}>
             <i class="fa-solid fa-synagogue" />
           </button>
+          <button onClick={() => handleCatogory("ReligiusPlaces")}><i class="fa-solid fa-synagogue" /></button>
           <p>Religius Places</p>
         </li>
         <li>
@@ -55,6 +56,7 @@ const Functionbar = ({ handleCatogory }) => {
           <button onClick={() => handleCatogory("hiking")}>
             <i class="fa-solid fa-person-hiking" />
           </button>
+          <button onClick={() => handleCatogory("Hiking")}><i class="fa-solid fa-person-hiking" /></button>
           <p>Hiking</p>
         </li>
       </ul>
