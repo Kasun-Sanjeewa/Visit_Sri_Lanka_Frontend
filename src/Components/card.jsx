@@ -36,7 +36,7 @@ const Cards = (props) => {
         <div className="Content_btn">
           <button type="button">Book Vehicle</button>
           <button type="button">Map</button>
-        </div>//remove the button
+        </div>
       </div>
     </section>
   );
