@@ -213,6 +213,11 @@
   border: none;
 }
 
+.hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .l_btn {
   left: 8px;
 }
