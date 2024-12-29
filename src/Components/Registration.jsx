@@ -30,6 +30,11 @@ export default function Registration() {
                             <label></label>
                         </div>
                         <button className='sign-up-btn'>Sign Up</button>
+
+                        <div className="divider">OR</div>
+                        <button type="button" className='google-btn' >
+                            <img src='./src/assets/google.png' className='google-image' /> Continue with Google
+                        </button>
                     </form>
                     <p className='lready-sign-up-text'>Already have an account<a href="/Login" className='sign-in-link'>Sign in</a></p>
                 </div>
