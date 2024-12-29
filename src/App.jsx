@@ -1,8 +1,8 @@
 
 import "./App.css";
 import Navbar from "./Components/Navbar";
-import Functionbar from "./Components/Functionbar";
-import CardList from "./Components/CardList";
+import Functionbar from "./Components/Functionbar.jsx";
+import CardList from "./Components/CardList.jsx";
 import Registration from "./Components/Registration"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Components/Login";

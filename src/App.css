@@ -207,13 +207,13 @@
   color: rgb(245, 239, 239);
   border: none;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .img_container:hover button {
@@ -261,6 +261,50 @@
 
 .R_btn {
   right: 8px;
+}
+
+
+.function_bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.list_link_wrapper {
+  display: flex;
+  justify-content: center; /* Center content */
+  align-items: center; /* Align vertically */
+  overflow: hidden; /* Hide content outside the bounds */
+  width: 60%; /* Adjust width based on your design */
+}
+
+.list_link {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out; /* Smooth scrolling effect */
+}
+
+.list_link li {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.prev_button,
+.next_button {
+  font-size: 16px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  background-color: #d7dade;
+  color: rgb(2, 1, 1);
+  border-radius: 5px;
+}
+
+.prev_button:hover,
+.next_button:hover {
+  background-color: #dbdfe3;
 }
 
 
