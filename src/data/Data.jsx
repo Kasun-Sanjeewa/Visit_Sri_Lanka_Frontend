@@ -1,5 +1,4 @@
 export const Data = {
-
   //Hotels
 
   hotels: [
@@ -59,6 +58,8 @@ export const Data = {
     },
   ],
 
+  //Beaches
+
   beaches: [
     {
       image: [
@@ -107,6 +108,8 @@ export const Data = {
     },
   ],
 
+  //Lakes
+
   lakes: [
     {
       image: [
@@ -136,44 +139,9 @@ export const Data = {
       id: 14,
     },
   ],
-  hiking: [
-    {
-      image: [
-        "https://www.srilankanexpeditions.com/images/destinations-in-sri-lanka/best-things-to-do-in-horton-plains/slider1.jpg",
-        "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRJWoqyLcjizsA4bQfSlwzp_nVjzPInAnwWOr4z7lUGcrBhd0BjDWGs4Ustk8wtX-21gB4-VQhSAYLfEyRaAkYFiBF6uDtxS7yO48uOnw",
-        "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQ3mPrab0MxkTUYRnWTi1hNPOEJ-lOGj_aqJbpR1x-N3GYdJfdsUPin6Gnik871V4_hVcUIN9a4IeqDvKdVHreofNVwimRpjnJyB1GQBQ",
-      ],
-      title: "Horton Plains National Park",
-      id: 15,
-    },
-    {
-      image: [
-        "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTbhPodUBCudLzf3fW39_Up9Z79nmrq5HlAhxUSVSFv-cG-bpaHZJUU1Nc7b63zIXo6UYusLpac7BR3sc4tPV8a50bPwja9fzdQo37vKQ",
-        "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSBCBBf00h7kzevluJrss1zAwS9nsr9yo5HXn1adnB9oUM6dcOH7Q3RqfH0A4nzhucxxvf5FUaYwX-F-qvcst45AmQ3FzUTcrC7RUolOw",
-        "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTKljD1xqqHmvy2cQmQQ2U5WIr9cMV99pY4ASpfyCFlks44BvZOH_hl0lQwiUwYYgSSZyNV_rids1UHW5oEE1OUnnCu_RUMZ7aIUw2wAg",
-      ],
-      title: "Pidurangala Rock",
-      id: 16,
-    },
-    {
-      image: [
-        "https://www.reddottours.com/uploads/Activities/Little-Adam's-Peak/Little-Adam's-Peak-header.jpg",
-        "https://digitaltravelcouple.com/wp-content/uploads/2019/12/little-adams-peak-drone-1.jpg",
-        "https://bestofceylon.com/images/ella/trek-to-little-adams-peak/trek-to-little-adams-peak1.jpg",
-      ],
-      title: "Little Adam's Peak",
-      id: 17,
-    },
-    {
-      image: [
-        "https://cdn.getyourguide.com/img/tour/a1cba5e8ce69e865.jpeg/148.jpg",
-        "https://www.experiencetravelgroup.com/reposit/20161201142435.jpg",
-        "https://d30od4ebpi69u8.cloudfront.net/2020/02/7-4-1.jpg",
-      ],
-      title: "Adam's Peak",
-      id: 18,
-    },
-  ],
+
+  //Room
+
   room: [
     {
       image: [
@@ -212,6 +180,9 @@ export const Data = {
       id: 22,
     },
   ],
+
+  //Cabana
+
   cabana: [
     {
       image: [
@@ -251,6 +222,7 @@ export const Data = {
     },
   ],
 
+  //Camping
 
   camping: [
     {
@@ -310,7 +282,9 @@ export const Data = {
       id: 32,
     },
   ],
-  
+
+  // Forest
+
   forest: [
     {
       image: [
@@ -455,6 +429,8 @@ export const Data = {
     },
   ],
 
+  //Hiking
+
   Hiking: [
     {
       image: [
@@ -491,84 +467,6 @@ export const Data = {
       ],
       title: "Adam's Peak",
       id: 48,
-    },
-  ],
-
-
-  room: [
-    {
-      image: [
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/128021616.jpg?k=9385a3a47e25936a261d6a1f94b2c3013ae7b8768302f89bec76557e5a363274&o=&hp=1",
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/109649767.jpg?k=79dfd036fad683c421ab572c0b22c32fe4ebacc16bb87474a3aff84101d9b2ed&o=&hp=1",
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/160996756.jpg?k=c7510808e1bf46929bd2dace4faff6abc67b871e0eaff92e42f73288c6988df5&o=&hp=1",
-      ],
-      title: "Allens home stay (Jafna)",
-      id: 49,
-    },
-    {
-      image: [
-        "https://cf.bstatic.com/xdata/images/hotel/max500/629024010.jpg?k=7b5f51d6f1c9659d3ecf555a232f5d95fae5756596f42c909a289f4ce45d50db&o=",
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/629023805.jpg?k=7bc629466aaac0e7a07d58736aa6375ac558e81546783cb7597094eeed2df45f&o=&hp=1",
-        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/629023799.jpg?k=3248e11634f5d03531a2afd5bac3f12dc911fd515b30aa46365aeaabdea960df&o=&hp=1",
-      ],
-      title: "Kokuvil Villa Homestay",
-      id: 50,
-    },
-    {
-      image: [
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/463945764.jpg?k=d4342449d407e7c043a8bffe7b5f19beb5ac8c1d19bf7dd2d9ea2d7cb961cc51&o=&hp=1",
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/457742342.jpg?k=f8942066a9146d0fae0bd5e0f5533f89563718db5561e2fcb7e7046075d3ae7f&o=&hp=1",
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/457742365.jpg?k=eff34cfdf62912fc20b206ea6fdb3d36291deb0c331ed2e47e26c678efe3ee6d&o=&hp=1",
-      ],
-      title: "Aiden Homestay (Pasikuda)",
-      id: 51,
-    },
-    {
-      image: [
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/209191476.jpg?k=e60a778082e4aa667872661ee3ec0c8ae6203d5a8ccd00a9ecc0b21b26d14b70&o=",
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/354746891.jpg?k=4755eb7dda52123cf9038a0b0a2844fdba818314cd4add0c7940e8d698393cc2&o=&hp=1",
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/354748392.jpg?k=e9b43617f63c69517eac3d28138c69e31e63bca1ec1884e7a1f9c36ba51b7ad5&o=&hp=1",
-      ],
-      title: "Lily Bank Cottage",
-      id: 52,
-    },
-  ],
-  cabana: [
-    {
-      image: [
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/90212345.jpg?k=9c48a80bbdab909c0a1dc4ce17d3b4d24e92b288a6b5d5feec9601dfc9cbede6&o=&hp=1",
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264348834.jpg?k=27159072d401e5e5747f82ae0aeda90f0bcd48f9c32a6b7aa9f073d2e2afcaf0&o=&hp=1",
-        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/2f/29/48/manthally-cabanas.jpg?w=700&h=-1&s=1",
-      ],
-      title: "Manthally Cabanas (Hikkaduwa)",
-      id: 53,
-    },
-    {
-      image: [
-        "https://cf.bstatic.com/xdata/images/hotel/max500/513727537.jpg?k=4ad9520023d507637cc2d2a81f0a607e92fc6160e9c129a2c2b9879c4c8d7dba&o=&hp=1",
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/513727564.jpg?k=3a91babbef1c9b9edb1c51ba28566059c3e04debd4792500c54e0617d2161a4b&o=&hp=1",
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/513727573.jpg?k=25e24a5a04d6aac859f55ced3e6e8584d17af68a44c8ad0bdf07a609f99bca6b&o=&hp=1",
-      ],
-      title: "Green View Cabana (Thangalla)",
-      id: 54,
-    },
-    {
-      image: [
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/589842401.jpg?k=9bf574db075b8af6c5b28feb1d7dcf84909913ea94a9022c3b1fd5e67f383c57&o=&hp=1",
-        "https://campinglanka.com/storage/files/lk/1397/thumb-816x460-feb7577394c505616970cfb100f41fbf.jpg",
-        "https://campinglanka.com/storage/files/lk/1397/thumb-816x460-7b18538abc44ecb40821f8b8c895445c.jpg",
-      ],
-      title: "Gagees lake view cabana (Weerakatiya)",
-      id: 55,
-    },
-    {
-      image: [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRhSLb4kNpO5MxqKnsdEHd40r76VwcI819AA&s",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDCuKpmwLuF20ieFaTxOktuSdNJJ8Xl6D8NQ&s",
-        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/609174502.jpg?k=31e0419d29fbb9f2597c3f251915b94e5b1c65b11873c632aaca3aaaf2a25b20&o=&hp=1",
-      ],
-      title: "Dot Bay Beach Cabana (Trincomalee)",
-      id: 56,
     },
   ],
 };
