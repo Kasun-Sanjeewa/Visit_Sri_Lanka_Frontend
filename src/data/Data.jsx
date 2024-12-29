@@ -1,4 +1,5 @@
 export const Data = {
+
   //Hotels
 
   hotels: [
@@ -58,6 +59,7 @@ export const Data = {
     },
   ],
 
+
   //Beaches
 
   beaches: [
@@ -108,6 +110,7 @@ export const Data = {
     },
   ],
 
+
   //Lakes
 
   lakes: [
@@ -139,6 +142,7 @@ export const Data = {
       id: 14,
     },
   ],
+
 
   //Room
 
@@ -181,6 +185,8 @@ export const Data = {
     },
   ],
 
+
+
   //Cabana
 
   cabana: [
@@ -221,6 +227,8 @@ export const Data = {
       id: 26,
     },
   ],
+
+
 
   //Camping
 
@@ -282,6 +290,8 @@ export const Data = {
       id: 32,
     },
   ],
+
+
 
   // Forest
 
@@ -429,6 +439,7 @@ export const Data = {
     },
   ],
 
+
   //Hiking
 
   Hiking: [
@@ -468,5 +479,6 @@ export const Data = {
       title: "Adam's Peak",
       id: 48,
     },
+
   ],
 };
