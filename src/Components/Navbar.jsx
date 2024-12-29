@@ -32,17 +32,10 @@ const Navbar = () => {
                 </a>
             </div>
             <div className="navbar-center">
-                <ul className="nav-links">
-                    <li>
-                        <a href="/products">Places</a>
-                    </li>
-                    <li>
-                        <a href="/about">About Us</a>
-                    </li>
-                    <li>
-                        <a href="/contact">Contact</a>
-                    </li>
-                </ul>
+                <form id='search-header'>
+                    <input placeholder='Type Here' ></input>
+                    <button ><i class="fa-solid fa-magnifying-glass" id='serchbtn' /></button>
+                </form>
             </div>
             <div className="navbar-right">
                 <a
