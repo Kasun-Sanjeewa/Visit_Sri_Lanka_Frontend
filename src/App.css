@@ -173,6 +173,7 @@
   padding-top: 5rem;
 }
 
+
 .card {
   padding: 1em;
   border: 1px solid;
@@ -215,7 +216,6 @@
   font-size: 20px;
 }
 
-.img_container img:hover+button,
 .img_container:hover button {
   display: flex;
 }
