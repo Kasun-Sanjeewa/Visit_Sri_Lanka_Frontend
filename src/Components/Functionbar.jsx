@@ -1,6 +1,7 @@
+import { useState } from "react";
+
 const Functionbar = ({ handleCatogory }) => {
-<<<<<<< Updated upstream
-=======
+  
   const [startIndex, setStartIndex] = useState(0);
   const itemsPerPage = 5; // Number of items visible at a time
 
@@ -17,6 +18,7 @@ const Functionbar = ({ handleCatogory }) => {
     },
     { name: "cabana", icon: "fa-solid fa-house-chimney-user", label: "Cabana" },
     { name: "room", icon: "fa-solid fa-house", label: "Rooms" },
+
     { name: "Hiking", icon: "fa-solid fa-person-hiking", label: "Hiking" },
   ];
 
@@ -37,70 +39,32 @@ const Functionbar = ({ handleCatogory }) => {
     }
   };
 
->>>>>>> Stashed changes
   return (
     <div className="function_bar">
-      <ul className="list_link">
-        <li>
-          <button onClick={() => handleCatogory("beaches")}>
-            <i class="fa-solid fa-umbrella-beach" />
-          </button>
-          <p>Beaches</p>
-        </li>
-        <li>
-          <button onClick={() => handleCatogory("lakes")}>
-            {" "}
-            <i class="fa-solid fa-water" />
-          </button>
-          <p>Lakes</p>
-        </li>
-        <li>
-          <button onClick={() => handleCatogory("hotels")}>
-            <i class="fa-solid fa-hotel" />
-          </button>
-          <p>Hotels</p>
-        </li>
-        <li>
-          <button onClick={() => handleCatogory("camping")}>
-            <i class="fa-solid fa-tents" />
-          </button>
-          <p>Camping</p>
-        </li>
-        <li>
-          <button onClick={() => handleCatogory("forest")}>
-            <i class="fa-solid fa-tree" />
-          </button>
-          <p>Forests</p>
-        </li>
-        <li>
-          <button onClick={() => handleCatogory("ReligiusPlaces")}>
-            <i class="fa-solid fa-synagogue" />
-          </button>
-          <button onClick={() => handleCatogory("ReligiusPlaces")}><i class="fa-solid fa-synagogue" /></button>
-          <p>Religius Places</p>
-        </li>
-        <li>
-          <button onClick={() => handleCatogory("cabana")}>
-            <i class="fa-solid fa-house-chimney-user" />
-          </button>
-          <p>Cabana</p>
-        </li>
-        <li>
-          <button onClick={() => handleCatogory("room")}>
-            <i class="fa-solid fa-house" />
-          </button>
-          <p>Rooms</p>
-        </li>
-        <li>
-          <button onClick={() => handleCatogory("hiking")}>
-            <i class="fa-solid fa-person-hiking" />
-          </button>
-          <button onClick={() => handleCatogory("Hiking")}><i class="fa-solid fa-person-hiking" /></button>
-          <p>Hiking</p>
-        </li>
-      </ul>
+      {startIndex > 0 && (
+        <button className="prev_button" onClick={handlePrevious}>
+          <i className="fa-solid fa-chevron-left" />
+        </button>
+      )}
+      <div className="list_link_wrapper">
+        <ul className="list_link">
+          {visibleCategories.map((category, index) => (
+            <li key={index}>
+              <button onClick={() => handleCatogory(category.name)}>
+                <i className={category.icon} />
+              </button>
+              <p>{category.label}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {startIndex + itemsPerPage < categories.length && (
+        <button className="next_button" onClick={handleNext}>
+          <i className="fa-solid fa-chevron-right" />
+        </button>
+      )}
     </div>
   );
-}
+};
 
 export default Functionbar;

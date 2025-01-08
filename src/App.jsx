@@ -1,12 +1,14 @@
 
 import "./App.css";
 import Navbar from "./Components/Navbar";
-import Functionbar from "./Components/Functionbar";
-import CardList from "./Components/CardList";
+import Functionbar from "./Components/Functionbar.jsx";
+import CardList from "./Components/CardList.jsx";
 import Registration from "./Components/Registration"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Components/Login";
 import { useState } from "react";
+import { TourPlannerForm } from "./Components/TourPlannerForm.jsx";
+
 
 
 function App() {
@@ -19,7 +21,6 @@ function App() {
   }
 
 
-
   return (
     <>
       <Navbar />
@@ -30,9 +31,9 @@ function App() {
           <Route path="/" element={<CardList category={category} />} />
           <Route path="/Registration" element={<Registration />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/abc" element={<TourPlannerForm />} />
         </Routes>
       </BrowserRouter>
-
     </>
   );
 }
