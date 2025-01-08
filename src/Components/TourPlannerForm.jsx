@@ -8,8 +8,8 @@ export function TourPlannerForm() {
   const [days, setDays] = useState("");
   const [groupType, setGroupType] = useState("");
   const [budget, setBudget] = useState("Cheap");
-  const [hotels, setHotels] = useState([]);
-  const [itinerary, setItinerary] = useState({});
+  const [hotels, setHotels] = useState([]); // For accommodations
+  const [itinerary, setItinerary] = useState([]); // For destinations
 
   const generateTripPlan = async () => {
     if (!location || !days || !groupType) {
@@ -26,8 +26,8 @@ export function TourPlannerForm() {
             {
               text: `Generate a Travel Plan for Location: ${location}, for ${days} Days, for a ${groupType} with a ${budget} budget. 
               Return JSON format only with two arrays:
-              1. destinations: [{image, name, location, timeToTravel, rating}]
-              2. accommodations: [{image, name, location, price, rating}]`,
+              1. destinations: [{name, location, timeToTravel, rating}]
+              2. accommodations: [{name, location, price, rating}]`,
             },
           ],
         },
@@ -52,7 +52,6 @@ export function TourPlannerForm() {
         return;
       }
 
-      // Extract JSON object only
       try {
         const jsonStartIndex = generatedContent.indexOf("{");
         const jsonEndIndex = generatedContent.lastIndexOf("}") + 1;
@@ -61,8 +60,8 @@ export function TourPlannerForm() {
         const parsedData = JSON.parse(jsonString);
 
         // Update state with parsed data
-        setDestinations(parsedData.destinations || []);
-        setAccommodations(parsedData.accommodations || []);
+        setItinerary(parsedData.destinations || []); // Update destinations
+        setHotels(parsedData.accommodations || []); // Update accommodations
       } catch (jsonParseError) {
         console.error("Failed to parse generated JSON:", jsonParseError);
         console.error("Generated content:", generatedContent);
@@ -74,7 +73,7 @@ export function TourPlannerForm() {
 
   return (
     <>
-      <h1>Plan Your Tour</h1>
+      <h1 className="plan-text">Plan Your Tour</h1>
       <div className="tour-planner-form">
         <div className="form-grid">
           <div className="form-group">
@@ -129,31 +128,25 @@ export function TourPlannerForm() {
           </button>
         </div>
       </div>
-
+      <h2 className="destination-title">Destinations</h2>
       <div className="destination-section">
-        <h2>Itinerary</h2>
-        {Object.entries(itinerary).map(([day, { plan }]) =>
-          plan.map((place, index) => (
-            <DestinationCard
-              key={`${day}-${index}`}
-              image={place.placeImageUrl}
-              name={place.placeName}
-              location={place.placeDetails}
-              timeToTravel={place.timeTravel}
-              rating={place.rating}
-            />
-          ))
-        )}
+        {itinerary.map((destination, index) => (
+          <DestinationCard
+            key={index}
+            name={destination.name}
+            location={destination.location}
+            timeToTravel={destination.timeToTravel}
+            rating={destination.rating}
+          />
+        ))}
       </div>
-
+      <h2 className="accommodation-title">Accommodations</h2>
       <div className="accommodation-section">
-        <h2>Accommodations</h2>
         {hotels.map((hotel, index) => (
           <AccommodationCard
             key={index}
-            image={hotel.hotelImageUrl}
-            name={hotel.hotelName}
-            location={hotel.hotelAddress}
+            name={hotel.name}
+            location={hotel.location}
             price={hotel.price}
             rating={hotel.rating}
           />

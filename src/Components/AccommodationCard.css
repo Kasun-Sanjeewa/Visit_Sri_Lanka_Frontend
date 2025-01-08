@@ -1,46 +1,104 @@
+.accommodation-container {
+  display: flex;
+  justify-content: space-between;
+  /* Space between cards */
+  flex-wrap: wrap;
+  /* Allow wrapping to the next row on smaller screens */
+  gap: 20px;
+  /* Add space between the cards */
+  padding: 20px;
+}
+
 .accommodation-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  width: 300px;
+  /* Fixed width for uniform layout */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accommodation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .card-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-bottom: 1px solid #ddd;
 }
 
 .card-content {
-  padding: 15px;
+  padding: 16px;
+  font-family: "Arial", sans-serif;
+  color: #333;
 }
 
 .card-content h3 {
-  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #222;
 }
 
 .location {
-  color: #666;
-  margin-bottom: 10px;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 16px;
 }
 
 .price {
+  font-size: 16px;
   font-weight: bold;
   color: #007bff;
+  margin-bottom: 0;
 }
 
 .rating {
   display: flex;
   align-items: center;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .star {
-  color: gold;
-  margin-right: 5px;
+  color: #ffc107;
+  margin-right: 4px;
+  font-size: 16px;
+  margin-bottom: 0;
 }
 
+.location-name {
+  text-align: center;
+}
+
+.rating-number {
+  margin-bottom: 0;
+}
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+  .accommodation-container {
+    flex-direction: column;
+    /* Stack cards vertically on smaller screens */
+    align-items: center;
+    /* Center cards */
+  }
+
+  .accommodation-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}

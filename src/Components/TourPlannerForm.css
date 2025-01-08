@@ -4,6 +4,41 @@
   padding: 20px;
   background-color: #f0f0f0;
   border-radius: 8px;
+  margin-bottom: 35px;
+}
+
+.plan-text {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.accommodation-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.destination-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accommodation-title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #6e6969;
+  width: 100%;
+}
+
+.destination-title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #6e6969;
 }
 
 .tour-planner-form h1 {
@@ -56,4 +91,3 @@
 .form-submit button:hover {
   background-color: #0056b3;
 }
-
