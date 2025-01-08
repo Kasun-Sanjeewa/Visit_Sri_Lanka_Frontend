@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const Functionbar = ({ handleCatogory }) => {
+  
   const [startIndex, setStartIndex] = useState(0);
   const itemsPerPage = 5; // Number of items visible at a time
 
@@ -17,7 +18,8 @@ const Functionbar = ({ handleCatogory }) => {
     },
     { name: "cabana", icon: "fa-solid fa-house-chimney-user", label: "Cabana" },
     { name: "room", icon: "fa-solid fa-house", label: "Rooms" },
-    { name: "hiking", icon: "fa-solid fa-person-hiking", label: "Hiking" },
+
+    { name: "Hiking", icon: "fa-solid fa-person-hiking", label: "Hiking" },
   ];
 
   const visibleCategories = categories.slice(
