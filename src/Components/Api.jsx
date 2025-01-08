@@ -38,7 +38,7 @@ function Api() {
       });
 
       const data = await res.json();
-      
+
       const generatedText =
         data?.candidates?.[0]?.content?.parts?.[0]?.text ||
         "No trip plan generated.";
