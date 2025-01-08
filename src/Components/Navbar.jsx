@@ -1,91 +1,92 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
-    const [isUserRegistered, setIsUserRegistered] = useState(false); // Registration status
-    const [userInfo, setUserInfo] = useState(
-        //{
-        //     name: 'John Doe',
-        //     email: 'john.doe@example.com'
-        // }
-    ); // Example user info for demonstration
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isUserRegistered, setIsUserRegistered] = useState(false); // Registration status
+  const [userInfo, setUserInfo] = useState();
+  //{
+  //     name: 'John Doe',
+  //     email: 'john.doe@example.com'
+  // } // Example user info for demonstration
 
+  // Toggle popup visibility
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
 
-    // Toggle popup visibility
-    const togglePopup = () => {
-        setIsPopupOpen(!isPopupOpen);
-    };
+  // useEffect(() => {
+  //     if (!userInfo) {
+  //         setIsPopupOpen(!isPopupOpen);
+  //     } else {
+  //         setIsUserRegistered(true);
+  //     }
+  // }, [userInfo])  
 
-    // useEffect(() => {
-    //     if (!userInfo) {
-    //         setIsPopupOpen(!isPopupOpen);
-    //     } else {
-    //         setIsUserRegistered(true);
-    //     }
-    // }, [userInfo])
+  return (
+    <nav className="navbar">
+      <div className="navbar-left">
+        <a href="/" className="logo">
+          Visit Sri Lanka
+        </a>
+      </div>
+      <div className="navbar-center">
+        <form id="search-header">
+          <input placeholder="Type Here"></input>
+          <button>
+            <i class="fa-solid fa-magnifying-glass" id="serchbtn" />
+          </button>
+          <a href="/abc">Travel Plane</a>
+        </form>
+      </div>
+      <div className="navbar-right">
+        <a
+          href="#!"
+          className="user-icon"
+          onClick={(e) => {
+            e.preventDefault();
+            togglePopup();
+          }}
+        >
+          <i className="fas fa-user"></i>
+        </a>
 
-    return (
-        <nav className="navbar">
-            <div className="navbar-left">
-                <a href="/" className="logo">
-                    Visit Sri Lanka
-                </a>
-            </div>
-            <div className="navbar-center">
-                <ul className="nav-links">
+        {/* Popup content */}
+        {isPopupOpen && (
+          <div className="popup">
+            <div className="popup-content">
+              {isUserRegistered ? (
+                // Display user info if registered
+                <div>
+                  <h3>Welcome, {userInfo.name}</h3>
+                  <p className="email">Email: {userInfo.email}</p>
+                  <ul>
                     <li>
-                        <a href="/products">Places</a>
+                      <a href="/logout">Logout</a>
+                    </li>
+                  </ul>
+                </div>
+              ) : (
+                <div>
+                  <h3>User Options</h3>
+                  <ul>
+                    <li>
+                      <a href="/Registration">Sign-up</a>
                     </li>
                     <li>
-                        <a href="/about">About Us</a>
+                      <a href="/Login">Log-in</a>
                     </li>
                     <li>
-                        <a href="/contact">Contact</a>
+                      <a href="/logout">Logout</a>
                     </li>
-                </ul>
+                  </ul>
+                </div>
+              )}
             </div>
-            <div className="navbar-right">
-                <a
-                    href="#!"
-                    className="user-icon"
-                    onClick={(e) => {
-                        e.preventDefault();
-                        togglePopup();
-                    }}
-                >
-                    <i className="fas fa-user"></i>
-                </a>
-
-                {/* Popup content */}
-                {isPopupOpen && (
-                    <div className="popup">
-                        <div className="popup-content">
-                            {isUserRegistered ? (
-                                // Display user info if registered
-                                <div>
-                                    <h3>Welcome, {userInfo.name}</h3>
-                                    <p className='email'>Email: {userInfo.email}</p>
-                                    <ul>
-                                        <li><a href="/logout">Logout</a></li>
-                                    </ul>
-                                </div>
-                            ) : (
-                                <div>
-                                    <h3>User Options</h3>
-                                    <ul>
-                                        <li><a href="/Registration">Sign-up</a></li>
-                                        <li><a href="/Login">Log-in</a></li>
-                                        <li><a href="/logout">Logout</a></li>
-                                    </ul>
-                                </div>
-                            )}
-                        </div>
-
-                    </div>
-                )}
-            </div>
-        </nav>
-    );
+          </div>
+        )}
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;

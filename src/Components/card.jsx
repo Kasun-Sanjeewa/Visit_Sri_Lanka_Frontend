@@ -5,11 +5,11 @@ const Cards = (props) => {
   const [index, setIndex] = useState(0);
 
   const handleNext = () => {
-    setIndex((prevIndex) => Math.min(prevIndex + 1, image.length - 1)); // Increment index but cap at the last index
+    setIndex((prevIndex) => Math.min(prevIndex + 1, image.length - 1));
   };
 
   const handlePrev = () => {
-    setIndex((prevIndex) => Math.max(prevIndex - 1, 0)); // Decrement index but cap at 0
+    setIndex((prevIndex) => Math.max(prevIndex - 1, 0));
   };
 
   return (
