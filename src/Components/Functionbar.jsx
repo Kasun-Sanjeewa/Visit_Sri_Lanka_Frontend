@@ -1,4 +1,43 @@
 const Functionbar = ({ handleCatogory }) => {
+<<<<<<< Updated upstream
+=======
+  const [startIndex, setStartIndex] = useState(0);
+  const itemsPerPage = 5; // Number of items visible at a time
+
+  const categories = [
+    { name: "beaches", icon: "fa-solid fa-umbrella-beach", label: "Beaches" },
+    { name: "lakes", icon: "fa-solid fa-water", label: "Lakes" },
+    { name: "hotels", icon: "fa-solid fa-hotel", label: "Hotels" },
+    { name: "camping", icon: "fa-solid fa-tents", label: "Camping" },
+    { name: "forest", icon: "fa-solid fa-tree", label: "Forests" },
+    {
+      name: "ReligiusPlaces",
+      icon: "fa-solid fa-synagogue",
+      label: "Religious Places",
+    },
+    { name: "cabana", icon: "fa-solid fa-house-chimney-user", label: "Cabana" },
+    { name: "room", icon: "fa-solid fa-house", label: "Rooms" },
+    { name: "Hiking", icon: "fa-solid fa-person-hiking", label: "Hiking" },
+  ];
+
+  const visibleCategories = categories.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
+
+  const handleNext = () => {
+    if (startIndex + itemsPerPage < categories.length) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
+  };
+
+>>>>>>> Stashed changes
   return (
     <div className="function_bar">
       <ul className="list_link">
