@@ -11,7 +11,6 @@ export function TourPlannerForm() {
   const [hotels, setHotels] = useState([]); // For accommodations
   const [itinerary, setItinerary] = useState([]); // For destinations
 
-
   const generateTripPlan = async () => {
     if (!location || !days || !groupType) {
       alert("Please fill all fields.");
@@ -70,11 +69,7 @@ export function TourPlannerForm() {
     } catch (error) {
       console.error("Error fetching data from API:", error);
     }
-
   };
-
-
-
 
   return (
     <>
@@ -104,10 +99,7 @@ export function TourPlannerForm() {
 
           <div className="form-group">
             <label htmlFor="groupType">Group Type</label>
-            <select
-              id="groupType"
-              onChange={(e) => setGroupType(e.target.value)}
-            >
+            <select id="groupType" onChange={(e) => setGroupType(e.target.value)}>
               <option value="">Select type</option>
               <option value="family">Family</option>
               <option value="friends">Friends</option>
@@ -133,30 +125,42 @@ export function TourPlannerForm() {
           </button>
         </div>
       </div>
-      <h2 className="destination-title">Destinations</h2>
-      <div className="destination-section">
-        {itinerary.map((destination, index) => (
-          <DestinationCard
-            key={index}
-            name={destination.name}
-            location={destination.location}
-            timeToTravel={destination.timeToTravel}
-            rating={destination.rating}
-          />
-        ))}
-      </div>
-      <h2 className="accommodation-title">Accommodations</h2>
-      <div className="accommodation-section">
-        {hotels.map((hotel, index) => (
-          <AccommodationCard
-            key={index}
-            name={hotel.name}
-            location={hotel.location}
-            price={hotel.price}
-            rating={hotel.rating}
-          />
-        ))}
-      </div>
+
+      {/* Conditionally render Destinations section */}
+      {itinerary.length > 0 && (
+        <>
+          <h2 className="destination-title">Destinations</h2>
+          <div className="destination-section">
+            {itinerary.map((destination, index) => (
+              <DestinationCard
+                key={index}
+                name={destination.name}
+                location={destination.location}
+                timeToTravel={destination.timeToTravel}
+                rating={destination.rating}
+              />
+            ))}
+          </div>
+        </>
+      )}
+
+      {/* Conditionally render Accommodations section */}
+      {hotels.length > 0 && (
+        <>
+          <h2 className="accommodation-title">Accommodations</h2>
+          <div className="accommodation-section">
+            {hotels.map((hotel, index) => (
+              <AccommodationCard
+                key={index}
+                name={hotel.name}
+                location={hotel.location}
+                price={hotel.price}
+                rating={hotel.rating}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </>
   );
 }
