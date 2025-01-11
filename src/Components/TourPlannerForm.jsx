@@ -11,6 +11,7 @@ export function TourPlannerForm() {
   const [hotels, setHotels] = useState([]); // For accommodations
   const [itinerary, setItinerary] = useState([]); // For destinations
 
+
   const generateTripPlan = async () => {
     if (!location || !days || !groupType) {
       alert("Please fill all fields.");
@@ -69,7 +70,11 @@ export function TourPlannerForm() {
     } catch (error) {
       console.error("Error fetching data from API:", error);
     }
+
   };
+
+
+
 
   return (
     <>
