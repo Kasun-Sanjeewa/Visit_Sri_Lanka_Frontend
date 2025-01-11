@@ -52,6 +52,25 @@
   gap: 15px;
 }
 
+
+.destination-title,
+.accommodation-title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #6e6969;
+  display: block;
+  /* Ensure visibility when rendered */
+}
+
+.destination-title.hidden,
+.accommodation-title.hidden {
+  display: none;
+  /* Optional: Use this class to explicitly hide titles if needed */
+}
+
+
 @media (min-width: 768px) {
   .form-grid {
     grid-template-columns: repeat(4, 1fr);

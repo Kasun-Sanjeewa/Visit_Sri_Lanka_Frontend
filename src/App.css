@@ -45,6 +45,9 @@
   color: #fff;
   text-decoration: none;
   position: relative;
+  background-color: #999898;
+  padding: 9.5px 12px;
+  border-radius: 50%;
 }
 
 .navbar a {
@@ -56,6 +59,7 @@
 .navbar-right {
   position: relative;
 }
+
 
 #search-header {
   display: flex;
@@ -261,16 +265,21 @@
 
 .list_link_wrapper {
   display: flex;
-  justify-content: center; /* Center content */
-  align-items: center; /* Align vertically */
-  overflow: hidden; /* Hide content outside the bounds */
-  width: 60%; /* Adjust width based on your design */
+  justify-content: center;
+  /* Center content */
+  align-items: center;
+  /* Align vertically */
+  overflow: hidden;
+  /* Hide content outside the bounds */
+  width: 60%;
+  /* Adjust width based on your design */
 }
 
 .list_link {
   display: flex;
   gap: 20px;
-  transition: transform 0.3s ease-in-out; /* Smooth scrolling effect */
+  transition: transform 0.3s ease-in-out;
+  /* Smooth scrolling effect */
 }
 
 .list_link li {
@@ -323,6 +332,21 @@
   text-align: center;
   all: unset;
   cursor: pointer;
+}
+
+
+.travel-plan-btn {
+  padding: 8px 12px;
+  background-color: #ffcc00;
+  border-radius: 4px;
+}
+
+.travel-plan-btn:hover {
+  background-color: #bdab0e;
+}
+
+.navbar-right>a {
+  color: #ffffff;
 }
 
 /* Responsive Design */
