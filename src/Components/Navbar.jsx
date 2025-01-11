@@ -54,7 +54,7 @@ const Navbar = () => {
           <div className="popup">
             <div className="popup-content">
               {isUserRegistered ? (
-                // Display user info if 
+                // Display user info if registered
                 <div>
                   <h3>Welcome, {userInfo.name}</h3>
                   <p className="email">Email: {userInfo.email}</p>
