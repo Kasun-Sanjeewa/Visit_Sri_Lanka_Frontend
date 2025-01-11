@@ -35,10 +35,10 @@ const Navbar = () => {
           <button>
             <i class="fa-solid fa-magnifying-glass" id="serchbtn" />
           </button>
-          <a href="/abc">Travel Plane</a>
         </form>
       </div>
       <div className="navbar-right">
+        <a href="/abc" className="travel-plan-btn">Make Your Plane</a>
         <a
           href="#!"
           className="user-icon"
@@ -49,7 +49,6 @@ const Navbar = () => {
         >
           <i className="fas fa-user"></i>
         </a>
-
         {/* Popup content */}
         {isPopupOpen && (
           <div className="popup">
