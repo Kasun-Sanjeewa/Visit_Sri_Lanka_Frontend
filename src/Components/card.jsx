@@ -15,16 +15,16 @@ const Cards = (props) => {
   };
 
   const fetchlocation = async () => {
-      try {
-        const { locationUrl } = await fetchLocationData(title); // Extract photoUrl from response
-        setLocation(locationUrl); // Set the photo URL in state
-        if (locationUrl) {
-        window.open(locationUrl, "_blank");}
-      } catch (err) {
-        console.error("Error fetching location data:", err);
+    try {
+      const { locationUrl } = await fetchLocationData(title); // Extract photoUrl from response
+      setLocation(locationUrl); // Set the photo URL in state
+      if (locationUrl) {
+        window.open(locationUrl, "_blank");
       }
-    };
-  
+    } catch (err) {
+      console.error("Error fetching location data:", err);
+    }
+  };
 
   console.log(location);
 
@@ -50,8 +50,17 @@ const Cards = (props) => {
       <div className="card_details">
         <h>{title}</h>
         <div className="Content_btn">
-          <button type="button">Book Vehicle</button>
-          <button type="button" onClick={fetchlocation}>Map</button>
+          <button
+            type="button"
+            onClick={() => {
+              window.open("https://shorturl.at/SDta9", "_blank");
+            }}
+          >
+            Book Vehicle
+          </button>
+          <button type="button" onClick={fetchlocation}>
+            Map
+          </button>
         </div>
       </div>
     </section>
