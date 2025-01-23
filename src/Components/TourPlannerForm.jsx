@@ -17,7 +17,7 @@ export function TourPlannerForm() {
       return;
     }
 
-    const apiKey = "AIzaSyBfQhJmsbtmlIYbCx7eeYlMI-q9WtLTEH8";
+    const apiKey = "AIzaSyCb_Z2N2vEP1FgkuI9p5HUW3OI3RUR2CiE"; //sk-f857558ba3554b26b1b2921d622a6ab2
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
     const requestBody = {
       contents: [

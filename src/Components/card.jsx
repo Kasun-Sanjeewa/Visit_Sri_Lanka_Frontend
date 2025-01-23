@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import fetchLocationData from "./LocationAPI";
 
 const Cards = (props) => {
   const { image, title } = props;
   const [index, setIndex] = useState(0);
+  const [location, setLocation] = useState("");
 
   const handleNext = () => {
     setIndex((prevIndex) => Math.min(prevIndex + 1, image.length - 1));
@@ -11,6 +13,20 @@ const Cards = (props) => {
   const handlePrev = () => {
     setIndex((prevIndex) => Math.max(prevIndex - 1, 0));
   };
+
+  const fetchlocation = async () => {
+      try {
+        const { locationUrl } = await fetchLocationData(title); // Extract photoUrl from response
+        setLocation(locationUrl); // Set the photo URL in state
+        if (locationUrl) {
+        window.open(locationUrl, "_blank");}
+      } catch (err) {
+        console.error("Error fetching location data:", err);
+      }
+    };
+  
+
+  console.log(location);
 
   return (
     <section className="card">
@@ -35,7 +51,7 @@ const Cards = (props) => {
         <h>{title}</h>
         <div className="Content_btn">
           <button type="button">Book Vehicle</button>
-          <button type="button">Map</button>
+          <button type="button" onClick={fetchlocation}>Map</button>
         </div>
       </div>
     </section>
