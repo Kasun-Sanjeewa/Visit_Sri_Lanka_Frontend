@@ -10,12 +10,14 @@ export function TourPlannerForm() {
   const [budget, setBudget] = useState("Cheap");
   const [hotels, setHotels] = useState([]); // For accommodations
   const [itinerary, setItinerary] = useState([]); // For destinations
+  const [isloading, setIsloading] = useState(false);
 
   const generateTripPlan = async () => {
     if (!location || !days || !groupType) {
       alert("Please fill all fields.");
       return;
     }
+    setIsloading(true);
 
     const apiKey = "AIzaSyCb_Z2N2vEP1FgkuI9p5HUW3OI3RUR2CiE"; //sk-f857558ba3554b26b1b2921d622a6ab2
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
@@ -69,10 +71,18 @@ export function TourPlannerForm() {
     } catch (error) {
       console.error("Error fetching data from API:", error);
     }
+    setIsloading(false);
   };
 
   return (
     <>
+      {/* Loading Overlay */}
+      {isloading && (
+        <div className="loading-overlay">
+          <div className="spinner"></div>
+        </div>
+      )}
+
       <h1 className="plan-text">Plan Your Tour</h1>
       <div className="tour-planner-form">
         <div className="form-grid">
@@ -99,7 +109,10 @@ export function TourPlannerForm() {
 
           <div className="form-group">
             <label htmlFor="groupType">Group Type</label>
-            <select id="groupType" onChange={(e) => setGroupType(e.target.value)}>
+            <select
+              id="groupType"
+              onChange={(e) => setGroupType(e.target.value)}
+            >
               <option value="">Select type</option>
               <option value="family">Family</option>
               <option value="friends">Friends</option>
@@ -121,7 +134,7 @@ export function TourPlannerForm() {
 
         <div className="form-submit">
           <button type="button" onClick={generateTripPlan}>
-            Plan Trip
+            {isloading ? "Searching..." : "Plan Trip"}
           </button>
         </div>
       </div>

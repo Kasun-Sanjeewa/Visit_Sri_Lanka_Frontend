@@ -38,7 +38,12 @@ const Navbar = () => {
         </form>
       </div>
       <div className="navbar-right">
-        <a href="/abc" className="travel-plan-btn">Make Your Plane</a>
+        <a href="/travelplane" className="travel-plan-btn">
+          Make Your Plane
+        </a>
+        <a href="/plaseinfo" className="travel-plan-btn">
+          Place Details
+        </a>
         <a
           href="#!"
           className="user-icon"
