@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import fetchLocationData from "./LocationAPI";
+import GiftVoucher from "./Voucher";
+import ReactDOM from 'react-dom/client';
 
 const Cards = (props) => {
   const { image, title } = props;
@@ -27,6 +29,27 @@ const Cards = (props) => {
   };
 
   console.log(location);
+
+
+  const handlePrint = () => {
+
+    // Open the Invoice component in a new tab
+    const newTab = window.open("", "_blank");
+
+    // Use `createRoot` instead of `render`
+    const root = ReactDOM.createRoot(newTab.document.body);  // Create root
+    root.render(
+      <GiftVoucher />
+    );
+
+    // Wait for the new tab to load, then trigger the print for the invoice
+    newTab.onload = () => {
+      // Now, in the new tab, we only print the invoice
+      newTab.print();
+      // Close the new tab after printing to avoid keeping an empty tab open
+      newTab.close();
+    };
+  }
 
   return (
     <section className="card">
@@ -63,6 +86,7 @@ const Cards = (props) => {
           </button>
         </div>
       </div>
+      <button onClick={handlePrint}>Print Button</button>
     </section>
   );
 };

@@ -44,6 +44,9 @@ const Navbar = () => {
         <a href="/plaseinfo" className="travel-plan-btn">
           Place Details
         </a>
+        <a href="/voucher" className="travel-plan-btn" target="_blank">
+          Voucher
+        </a>
         <a
           href="#!"
           className="user-icon"

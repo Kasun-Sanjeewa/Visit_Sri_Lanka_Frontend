@@ -9,6 +9,7 @@ import Login from "./Components/Login";
 import { useState } from "react";
 import { TourPlannerForm } from "./Components/TourPlannerForm.jsx";
 import { TouristInfo } from "./Components/TourPlaceInfo.jsx";
+import GiftVoucher from "./Components/Voucher.jsx";
 
 
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/travelplane" element={<TourPlannerForm />} />
           <Route path="/plaseinfo" element={<TouristInfo />} />
+
         </Routes>
       </BrowserRouter>
     </>
