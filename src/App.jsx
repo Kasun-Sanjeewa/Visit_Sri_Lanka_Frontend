@@ -10,6 +10,7 @@ import { useState } from "react";
 import { TourPlannerForm } from "./Components/TourPlannerForm.jsx";
 import { TouristInfo } from "./Components/TourPlaceInfo.jsx";
 import GiftVoucher from "./Components/Voucher.jsx";
+import Offrpage from "./Components/Offrpage.jsx";
 
 
 
@@ -35,7 +36,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/travelplane" element={<TourPlannerForm />} />
           <Route path="/plaseinfo" element={<TouristInfo />} />
-
+          <Route path="/voucher" element={<Offrpage />} />
         </Routes>
       </BrowserRouter>
     </>
