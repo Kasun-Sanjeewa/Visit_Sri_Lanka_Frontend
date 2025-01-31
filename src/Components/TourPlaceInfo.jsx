@@ -39,7 +39,7 @@ export function TouristInfo() {
         {
           parts: [
             {
-              text: `Provide detailed information about the place '${location}'. Include the following details if available: Location, historical significance, UNESCO status, structural details, gardens, and notable features. Return JSON format only with a single object containing these fields: location, meaning, historicalEra, unescoStatus, structure, gardens, features.`,
+              text: `Provide detailed information about the place '${location}'. Include the following details if available: Location, historical significance, structural details, gardens, and notable features. Return JSON format only with a single object containing these fields: location, meaning, historicalEra, structure, gardens, features.`,
             },
           ],
         },
@@ -126,11 +126,7 @@ export function TouristInfo() {
                   <strong>Historical Era:</strong> {placeDetails.historicalEra}
                 </li>
               )}
-              {placeDetails.unescoStatus && (
-                <li>
-                  <strong>UNESCO Status:</strong> {placeDetails.unescoStatus}
-                </li>
-              )}
+              
               {placeDetails.structure &&
                 typeof placeDetails.structure === "object" && (
                   <li>
